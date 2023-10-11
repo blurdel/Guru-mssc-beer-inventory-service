@@ -11,7 +11,7 @@ import org.springframework.jms.support.converter.MessageType;
 public class JmsConfig {
 	
 	@Bean
-    public MessageConverter messageConverter() {
+    public MessageConverter jacksonJmsMessageConverter() {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
         converter.setTypeIdPropertyName("_type");
